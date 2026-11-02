@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>1.4 Opciones y configuración básica - Documentación Oficial MOBILE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <!-- Botón menú hamburguesa para celulares -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">☰</button>
+
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">MOBILE</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buscador superior con atajo de teclado Ctrl+K -->
+      <div class="global-search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="globalSearch" placeholder="Buscar referencia o contenido...">
+        <kbd class="shortcut-key">Ctrl+K</kbd>
+      </div>
+
+      <div class="topbar-right">
+        <!-- Botón Modo Oscuro / Claro -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro -->
+  <div class="layout-container">
+
+    <!-- Menú Lateral de Navegación -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título...">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 1: Introducción y Entorno -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group1">
+            <span class="arrow">▼</span> 1. INTRODUCCIÓN Y ENTORNO
+          </button>
+          <ul class="nav-subitems" id="group1" style="display: block;">
+            <li><a href="index.html">1.1 ¿Qué es DSI MOBILE?</a></li>
+            <li><a href="1.2-autenticacion.html">1.2 Autenticación para mayor seguridad</a></li>
+            <li><a href="1.3-bandeja-principal.html">1.3 Bandeja principal</a></li>
+            <li class="active"><a href="1.4-opciones-configuracion.html">1.4 Opciones y configuración básica</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 2: Consultas Comerciales y Cartera -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group2">
+            <span class="arrow">▶</span> 2. CONSULTAS COMERCIALES Y CARTERA
+          </button>
+          <ul class="nav-subitems" id="group2" style="display: none;">
+            <li><a href="2.1-reporte-stock.html">2.1 Reporte de Stock</a></li>
+            <li><a href="2.2-lista-precios.html">2.2 Lista de Precios</a></li>
+            <li><a href="2.3-estado-cuenta-cliente.html">2.3 Estado de Cuenta del Cliente</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 3: Nota de Pedido en Campo -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group3">
+            <span class="arrow">▶</span> 3. NOTA DE PEDIDO EN CAMPO
+          </button>
+          <ul class="nav-subitems" id="group3" style="display: none;">
+            <li><a href="3.1-inicio-flujo.html">3.1 Inicio del flujo</a></li>
+            <li><a href="3.2-seleccion-cliente.html">3.2 Paso 1: Selección y validación del cliente</a></li>
+            <li><a href="3.3-registro-cliente-nuevo.html">3.3 Registro rápido de cliente nuevo</a></li>
+            <li><a href="3.4-tarjetas-repuestos.html">3.4 Paso 2: Tarjetas de Repuestos y Selección de Cantidades</a></li>
+            <li><a href="3.5-forma-cobro.html">3.5 Paso 3: Selección de Forma de Cobro</a></li>
+            <li><a href="3.6-tipo-entrega.html">3.6 Paso 4: Selección del Tipo de Entrega</a></li>
+            <li><a href="3.7-opciones-grabado.html">3.7 Paso 5: Opciones de Grabado</a></li>
+            <li><a href="3.8-listado-consultas.html">3.8 Listado y consultas de Notas de Pedido a demanda</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 4: Aprobaciones y Operaciones de Almacén -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group4">
+            <span class="arrow">▶</span> 4. APROBACIONES Y ALMACÉN
+          </button>
+          <ul class="nav-subitems" id="group4" style="display: none;">
+            <li><a href="4.1-estado-nuevo.html">4.1 Estado Nuevo</a></li>
+            <li><a href="4.2-aprobacion-ventas.html">4.2 Aprobación de Ventas y opción "Abrir NP"</a></li>
+            <li><a href="4.3-aprobacion-despacho.html">4.3 Aprobación de Despacho</a></li>
+            <li><a href="4.4-aprobacion-cobranzas.html">4.4 Aprobación de Cobranzas</a></li>
+            <li><a href="4.5-preparacion-salida-almacen.html">4.5 Preparación y Salida en Almacén</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+      <!-- Migas de pan -->
+      <nav class="breadcrumbs" aria-label="Migas de pan">
+        <a href="index.html">Docs</a>
+        <span class="sep">/</span>
+        <a href="index.html">1. Introducción y Entorno</a>
+        <span class="sep">/</span>
+        <span class="current">1.4 Opciones y configuración básica</span>
+      </nav>
+
+      <!-- Encabezado de Página -->
+      <h1 class="page-title">1.4 Opciones y configuración básica</h1>
+      <p class="lead-text">
+        Guía de opciones rápidas, navegación lateral, alertas y ajustes de personalización en campo.
+      </p>
+
+      <div class="meta-tags">
+        <span class="tag">Producción Estable</span>
+        <span class="tag">Actualizado Marzo 2026</span>
+        <span class="tag">Versión 1.0.0</span>
+      </div>
+
+      <!-- Nota descriptiva principal / Controles Globales -->
+      <div class="callout-box">
+        <span class="warning-icon">ℹ️</span>
+        <div class="callout-content">
+          <p>
+            <strong>Controles Globales en Campo:</strong> Los controles globales permanecen activos en todas las pantallas para garantizar una navegación ágil y la seguridad de datos durante las operaciones en campo, permitiendo el despliegue inmediato de herramientas sin interrumpir procesos en curso ni perder información sin guardar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección 1: Campana de Alertas -->
+      <section class="section-block">
+        <h2 class="section-title">Campana de Alertas</h2>
+        <p class="section-subtext">
+          El icono de campana en la barra superior muestra un punto rojo visible cuando existe una Nota de Pedido pendiente sin terminar, permitiendo recuperarla al instante. Si no se desea continuar con la Nota de Pedido, solo se debe seleccionar la opción Cancelar que se encuentra en la parte inferior.
+        </p>
+
+        <!-- Capturas: 2 imágenes lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+          <!-- Captura 1: Campana con alerta roja -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 164.png" alt="Indicador de Nota de Pedido pendiente en campana" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Indicador de alerta en barra superior</span>
+          </div>
+
+          <!-- Captura 2: Formulario recuperado de la NP -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 165.png" alt="Recuperación de borrador de Nota de Pedido" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Recuperación de Nota de Pedido y opción Cancelar</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 2: Flecha de Retorno -->
+      <section class="section-block">
+        <h2 class="section-title">Flecha de Retorno</h2>
+        <p class="section-subtext">
+          La flecha de retroceso ubicada en la cabecera permite regresar exactamente un paso en el proceso operativo sin cerrar la sesión ni perder datos en memoria.
+        </p>
+
+        <!-- Captura: 1 imagen centrada -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+              <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 166.png" alt="Flecha de retroceso seguro en cabecera" class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Navegación de retorno seguro en flujo operativo</span>
+        </div>
+      </section>
+
+      <!-- Sección 3: Menú Lateral de 3 Rayas -->
+      <section class="section-block">
+        <h2 class="section-title">Menú Lateral de 3 Rayas</h2>
+        <p class="section-subtext">
+          Tocar el icono de tres líneas en la cabecera despliega el menú lateral con accesos directos a órdenes, stock de <strong>repuestos</strong> en <strong>almacenes</strong>, listas de precios y configuración general.
+        </p>
+
+        <!-- Capturas: 2 imágenes lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+          <!-- Captura 1: Bandeja con icono hamburguesa destacado -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 167.png" alt="Acceso al menú lateral" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Acceso superior al menú lateral</span>
+          </div>
+
+          <!-- Captura 2: Menú lateral desplegado -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 168.png" alt="Panel lateral expandible con accesos directos" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Panel lateral expandible con accesos directos</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 4: Modo Oscuro -->
+      <section class="section-block">
+        <h2 class="section-title">Modo Oscuro</h2>
+        <p class="section-subtext">
+          Interruptor deslizable dentro del menú lateral que activa el tema oscuro para optimizar la legibilidad en exteriores y ahorrar batería en campo.
+        </p>
+
+        <!-- Capturas: 2 imágenes lado a lado (Tema Claro vs Tema Oscuro) -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+          <!-- Captura 1: Menú en Modo Claro -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 169.png" alt="Menú lateral en modo claro" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Tema claro estándar</span>
+          </div>
+
+          <!-- Captura 2: Menú en Modo Oscuro -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 170.png" alt="Menú lateral en modo oscuro" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Tema oscuro activado para exteriores</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 5: Configuración y Huella Dactilar -->
+      <section class="section-block">
+        <h2 class="section-title">Configuración y Huella Dactilar</h2>
+        <p class="section-subtext">
+          Dentro de la opción Ajustes se cuenta con una casilla para habilitar la autenticación para mayor seguridad mediante biometría, permitiendo desbloquear el acceso tocando el sensor dactilar sin ingresar contraseña escrita.
+        </p>
+
+       <!-- Capturas: 3 imágenes lado a lado alineadas arriba -->
+        <div class="cards-grid" style="grid-template-columns: repeat(3, 1fr); align-items: start; margin-bottom: 24px;">
+          
+          <!-- Captura 1: Opción Configuración en menú -->
+          <div class="mobile-showcase" style="margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 171.png" alt="Acceso a configuración en menú" class="mobile-sharp-img">  
+            </div>
+            <span class="mobile-caption">Acceso a configuración en menú lateral</span>
+          </div>
+
+          <!-- Captura 2: Interruptor de Ingreso por sensor dactilar -->
+          <div class="mobile-showcase" style="margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 172.png" alt="Activación de biometría" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Interruptor para activar autenticación biométrica</span>
+          </div>
+
+          <!-- Captura 3: Confirmación en pantalla de sensor -->
+          <div class="mobile-showcase" style="margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 173.png" alt="Diálogo de confirmación dactilar" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Confirmación de sensor biométrico nativo</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Sección 6: Cerrar Sesión -->
+      <section class="section-block">
+        <h2 class="section-title">Cerrar Sesión</h2>
+        <p class="section-subtext">
+          Opción de acción destacada en color rojo al pie del menú lateral que finaliza la sesión activa de forma segura y devuelve a la pantalla de autenticación para mayor seguridad.
+        </p>
+
+        <!-- Capturas: 2 imágenes lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+          <!-- Captura 1: Opción Cerrar Sesión en Menú Lateral -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 174.png" alt="Opción Cerrar Sesión al pie del menú" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Opción destacada al pie del menú lateral</span>
+          </div>
+
+          <!-- Captura 2: Modal de Confirmación de Cierre de Sesión -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/1-INTRODUCCION/1.4-OPCIONES/image 175.png" alt="Cuadro de confirmación de cierre de sesión" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Cuadro de diálogo de salida segura</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ficha Técnica de Controles -->
+      <section class="section-block">
+        <h2 class="section-title">Ficha Técnica de Controles</h2>
+        <p class="section-subtext">
+          Especificación consolidada de componentes de interacción, estado y comportamiento operativo en MOBILE.
+        </p>
+
+        <div class="table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>Control / Elemento</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Función Operativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-highlight">Menú de 3 Rayas</td>
+                <td>Control de cabecera</td>
+                <td>Interactivo</td>
+                <td>Abre el menú lateral con los accesos directos de toda la solución.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Campana de Alertas</td>
+                <td>Icono de acción superior</td>
+                <td>Punto rojo si existe borrador</td>
+                <td>Avisa si hay una Nota de Pedido guardada sin terminar para recuperarla al instante.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Flecha Atrás</td>
+                <td>Control de retorno</td>
+                <td>Accesible</td>
+                <td>Retrocede un paso en el proceso operativo sin salirse del aplicativo.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Opción Modo oscuro</td>
+                <td>Interruptor deslizable</td>
+                <td>On / Off</td>
+                <td>Modifica el contraste visual de la interfaz para lectura cómoda y ahorro de batería.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Huella Dactilar</td>
+                <td>Casilla en Configuración</td>
+                <td>Activa / Inactiva</td>
+                <td>Permite la autenticación para mayor seguridad táctil sin necesidad de escribir la clave.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Opción Cerrar sesión</td>
+                <td>Opción de acción destacada</td>
+                <td>Alerta roja</td>
+                <td>Termina la sesión activa de forma segura y devuelve a la pantalla de autenticación para mayor seguridad.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior Conectada al Módulo 2.1 -->
+      <footer class="pagination-footer">
+        <a href="1.3-bandeja-principal.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 1.3 Bandeja principal</span>
+        </a>
+        <a href="2.1-reporte-stock.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">2.1 Reporte de Stock →</span>
+        </a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

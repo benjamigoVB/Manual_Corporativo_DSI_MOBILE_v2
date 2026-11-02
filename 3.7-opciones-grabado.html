@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>3.7 Paso 5: Opciones de Grabado - Documentación Oficial MOBILE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <!-- Botón menú hamburguesa para celulares -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">☰</button>
+
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">MOBILE</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buscador superior con atajo de teclado Ctrl+K -->
+      <div class="global-search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="globalSearch" placeholder="Buscar referencia o contenido...">
+        <kbd class="shortcut-key">Ctrl+K</kbd>
+      </div>
+
+      <div class="topbar-right">
+        <!-- Botón Modo Oscuro / Claro -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro -->
+  <div class="layout-container">
+
+    <!-- Menú Lateral de Navegación -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título...">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 1: Introducción y Entorno -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group1">
+            <span class="arrow">▶</span> 1. INTRODUCCIÓN Y ENTORNO
+          </button>
+          <ul class="nav-subitems" id="group1" style="display: none;">
+            <li><a href="index.html">1.1 ¿Qué es DSI MOBILE?</a></li>
+            <li><a href="1.2-autenticacion.html">1.2 Autenticación para mayor seguridad</a></li>
+            <li><a href="1.3-bandeja-principal.html">1.3 Bandeja principal</a></li>
+            <li><a href="1.4-opciones-configuracion.html">1.4 Opciones y configuración básica</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 2: Consultas Comerciales y Cartera -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group2">
+            <span class="arrow">▶</span> 2. CONSULTAS COMERCIALES Y CARTERA
+          </button>
+          <ul class="nav-subitems" id="group2" style="display: none;">
+            <li><a href="2.1-reporte-stock.html">2.1 Reporte de Stock</a></li>
+            <li><a href="2.2-lista-precios.html">2.2 Lista de Precios</a></li>
+            <li><a href="2.3-estado-cuenta-cliente.html">2.3 Estado de Cuenta del Cliente</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 3: Nota de Pedido en Campo -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group3">
+            <span class="arrow">▼</span> 3. NOTA DE PEDIDO EN CAMPO
+          </button>
+          <ul class="nav-subitems" id="group3" style="display: block;">
+            <li><a href="3.1-inicio-flujo.html">3.1 Inicio del flujo</a></li>
+            <li><a href="3.2-seleccion-cliente.html">3.2 Paso 1: Selección y validación del cliente</a></li>
+            <li><a href="3.3-registro-cliente-nuevo.html">3.3 Registro rápido de cliente nuevo</a></li>
+            <li><a href="3.4-tarjetas-repuestos.html">3.4 Paso 2: Tarjetas de Repuestos y Selección de Cantidades</a></li>
+            <li><a href="3.5-forma-cobro.html">3.5 Paso 3: Selección de Forma de Cobro</a></li>
+            <li><a href="3.6-tipo-entrega.html">3.6 Paso 4: Selección del Tipo de Entrega</a></li>
+            <li class="active"><a href="3.7-opciones-grabado.html">3.7 Paso 5: Opciones de Grabado</a></li>
+            <li><a href="3.8-listado-consultas.html">3.8 Listado y consultas de Notas de Pedido a demanda</a></li>
+          </ul>
+        </div>
+
+        <!-- Grupo 4: Aprobaciones y Operaciones de Almacén -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group4">
+            <span class="arrow">▶</span> 4. APROBACIONES Y ALMACÉN
+          </button>
+          <ul class="nav-subitems" id="group4" style="display: none;">
+            <li><a href="4.1-estado-nuevo.html">4.1 Estado Nuevo</a></li>
+            <li><a href="4.2-aprobacion-ventas.html">4.2 Aprobación de Ventas y opción "Abrir NP"</a></li>
+            <li><a href="4.3-aprobacion-despacho.html">4.3 Aprobación de Despacho</a></li>
+            <li><a href="4.4-aprobacion-cobranzas.html">4.4 Aprobación de Cobranzas</a></li>
+            <li><a href="4.5-preparacion-salida-almacen.html">4.5 Preparación y Salida en Almacén</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+      <!-- Migas de pan -->
+      <nav class="breadcrumbs" aria-label="Migas de pan">
+        <a href="index.html">Docs</a>
+        <span class="sep">/</span>
+        <a href="3.1-inicio-flujo.html">3. Nota de Pedido en Campo</a>
+        <span class="sep">/</span>
+        <span class="current">3.7 Paso 5: Opciones de Grabado</span>
+      </nav>
+
+      <!-- Encabezado de Página -->
+      <h1 class="page-title">3.7 Paso 5: Opciones de Grabado</h1>
+      <p class="lead-text">
+        Resumen consolidado, opciones de confirmación comercial, captura de notas y generación de comprobante PDF e histórico.
+      </p>
+
+      <div class="meta-tags">
+        <span class="tag">Nota de Pedido</span>
+        <span class="tag">Cierre Transaccional</span>
+        <span class="tag">Producción Estable</span>
+        <span class="tag">Actualizado Marzo 2026</span>
+        <span class="tag">Versión 1.0.0</span>
+      </div>
+
+      <!-- Nota descriptiva principal / Impacto de Estado en DSI-NET ERP -->
+      <div class="callout-box">
+        <span class="warning-icon">ℹ️</span>
+        <div class="callout-content">
+          <p>
+            <strong>Consideración de Impacto de Estado en DSI-NET ERP:</strong> Elegir "No, Solo Grabar" guarda la orden como cotización (Estado Nuevo) y su comunicación no procede a despacho. Por el contrario, pulsar "Sí, Aprobar Ventas" autoriza los términos comerciales marcando la orden en cola directa de almacenes; el modal complementario permite agregar notas de entrega antes del grabado final, abriendo la pantalla de detalle con seguimiento histórico en línea de tiempo y emisión de comprobante en formato PDF.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección 1: Resumen Final de la Nota de Pedido -->
+      <section class="section-block">
+        <h2 class="section-title">1. Resumen Final de la Nota de Pedido</h2>
+        <p class="section-subtext">
+          Presenta la tarjeta consolidada con información comercial del cliente, método y condición de pago, listado de <strong>repuestos</strong> con accesos de edición y borrado directo, especificación del destino de despacho logístico, cálculo de importes totales en soles (S/.) y la botonera de acciones finales en el pie de pantalla.
+        </p>
+
+        <!-- Mockup Centrado: Resumen Final de la NP -->
+        <div class="mobile-showcase" style="margin: 0 auto 16px;">
+          <div class="mobile-mockup-frame">
+              <img src="IMAGENES/3-NOTA-DE-PEDIDO/3.7-PASO5/image 229.png" alt="Resumen final de la Nota de Pedido" class="mobile-sharp-img"> 
+          </div>
+          <span class="mobile-caption">Resumen consolidado de la Nota de Pedido previo a la confirmación</span>
+        </div>
+
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Tarjeta consolidada de la Nota de Pedido con cálculo de importes y controles de grabado.
+        </p>
+      </section>
+
+      <!-- Sección 2: Diálogo de Decisión Comercial: ¿Aprobar por Ventas? -->
+      <section class="section-block">
+        <h2 class="section-title">2. Diálogo de Decisión Comercial: ¿Aprobar por Ventas?</h2>
+        <p class="section-subtext">
+          Al presionar la acción principal 'Grabar Nota de Pedido', se dispara este cuadro de diálogo modal estructurado con tres alternativas operativas: 'Cancelar' (mantiene en pantalla), 'No, Solo Grabar' (guarda la orden preliminar en Estado Nuevo / Cotización) y 'Sí, Aprobar Ventas' (emite la aprobación comercial directa destacada en color verde).
+        </p>
+
+        <!-- Bloque de 2 capturas móviles lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 16px;">
+          
+          <!-- Mockup 1: Formulario de forma de cobro (Opción Grabar destacada) -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/3-NOTA-DE-PEDIDO/3.7-PASO5/image 230.png" alt="Formulario de forma de cobro" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Formulario de forma de cobro</span>
+          </div>
+
+          <!-- Mockup 2: Formulario completado (Modal ¿Aprobar por Ventas?) -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+                <img src="IMAGENES/3-NOTA-DE-PEDIDO/3.7-PASO5/image 231.png" alt="Formulario completado" class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Formulario completado</span>
+          </div>
+
+        </div>
+
+        <!-- Leyenda general del bloque -->
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Cuadro modal con las 3 alternativas comerciales de registro.
+        </p>
+      </section>
+
+      <!-- Sección 3: Ventana Modal Emergente: Nota del Pedido -->
+      <section class="section-block">
+        <h2 class="section-title">3. Ventana Modal Emergente: Nota del Pedido</h2>
+        <p class="section-subtext">
+          Ambas alternativas de grabado proceden obligatoriamente hacia el modal complementario "Nota del Pedido". Esta corriente provee un área de captura libre para ingresar observaciones logísticas, referencias de entrega en destino o comentarios para <strong>almacenes</strong> con un límite exacto de 254 caracteres antes del envío final con la <strong>opción</strong> "Grabar Pedido".
+        </p>
+
+        <!-- Mockup Centrado: Modal Nota del Pedido -->
+        <div class="mobile-showcase" style="margin: 0 auto 16px;">
+          <div class="mobile-mockup-frame">
+              <img src="IMAGENES/3-NOTA-DE-PEDIDO/3.7-PASO5/image 232.png" alt="Ventana modal emergente: Nota del Pedido" class="mobile-sharp-img"> 
+          </div>
+          <span class="mobile-caption">Ventana modal emergente para ingresar notas u observaciones de despacho</span>
+        </div>
+
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Captura de observaciones logísticas y comentarios operativos para almacenes.
+        </p>
+      </section>
+
+      <!-- Sección 4: Detalle de la Nota de Pedido Grabada -->
+      <section class="section-block">
+        <h2 class="section-title">4. Detalle de la Nota de Pedido Grabada</h2>
+        <p class="section-subtext">
+          Presenta la vista completa de la orden registrada con correlativo oficial de cabecera, siglas de estado (Abierta, Pendiente), datos fiscales del cliente, relación detallada de <strong>repuestos</strong> asignados, importe total y la barra de herramientas inferior con las opciones operativas de "Histórico" y "Comprobante".
+        </p>
+
+        <!-- Mockup Centrado: Detalle de la NP Grabada -->
+        <div class="mobile-showcase" style="margin: 0 auto 16px;">
+          <div class="mobile-mockup-frame">
+              <img src="img/3.7d-detalle-nota-pedido-grabada.png" alt="Pantalla completa de detalle de la orden con badges y acciones" class="mobile-sharp-img"> 
+          </div>
+          <span class="mobile-caption">Pantalla completa de detalle de la orden con datos de cabecera y acciones de gestión</span>
+        </div>
+
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Pantalla completa de detalle de la orden con datos de cabecera y opciones de gestión.
+        </p>
+      </section>
+
+      <!-- Sección 5: Histórico de Estados y Línea de Tiempo -->
+      <section class="section-block">
+        <h2 class="section-title">5. Histórico de Estados y Línea de Tiempo</h2>
+        <p class="section-subtext">
+          Al pulsar la acción "Histórico", se despliega una línea de tiempo vertical cronológica que expone en tiempo real las etapas de aprobaciones y despacho: Aprobación de Ventas, Aprobación de Despacho, Aprobación de Cobranza, Impresión de picking, Impresión de packing y Asignación de bultos en <strong>almacenes</strong>.
+        </p>
+
+        <!-- Mockup Centrado: Línea de Tiempo de Histórico -->
+        <div class="mobile-showcase" style="margin: 0 auto 16px;">
+          <div class="mobile-mockup-frame">
+              <img src="img/3.7e-historico-estados-timeline.png" alt="Línea de tiempo cronológica con trazabilidad de aprobaciones y despacho" class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Línea de tiempo con trazabilidad del circuito de aprobaciones y despacho</span>
+        </div>
+
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Seguimiento del circuito de aprobaciones y operaciones de almacén en tiempo real.
+        </p>
+      </section>
+
+      <!-- Sección 6: Comprobante en Formato PDF y Vista de Impresión -->
+      <section class="section-block">
+        <h2 class="section-title">6. Comprobante en Formato PDF y Vista de Impresión</h2>
+        <p class="section-subtext">
+          Al pulsar la acción "Comprobante", el sistema genera un documento imprimible formal en formato 100% A4 con desglose tributario completo, membrete oficial corporativo de DSI SAC y renderizado optimizado para impresión térmica o distribución digital inmediata.
+        </p>
+
+        <!-- Mockup Centrado: Vista de Comprobante PDF -->
+        <div class="mobile-showcase" style="margin: 0 auto 16px;">
+          <div class="mobile-mockup-frame">
+              <img src="img/3.7f-comprobante-pdf-a4.png" alt="Vista de documento formal y comprobante en formato PDF" class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Vista previa de comprobante oficial en formato PDF para impresión o envío</span>
+        </div>
+
+        <p style="text-align: center; font-size: 13px; color: var(--color-text-muted); margin-bottom: 32px;">
+          Generación y vista de impresión de la Nota de Pedido en formato formal PDF.
+        </p>
+      </section>
+
+<!-- Ficha Técnica de Controles -->
+      <section class="section-block">
+        <h2 class="section-title">Ficha Técnica de Controles</h2>
+        <p class="section-subtext">
+          Especificación detallada de elementos de formulario y validaciones lógicas en tiempo de ejecución.
+        </p>
+
+        <div class="table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>CONTROL / ELEMENTO</th>
+                <th>TIPO</th>
+                <th>ESTADO</th>
+                <th>FUNCIÓN OPERATIVA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Opción + Agregar más</td>
+                <td>Botón de texto</td>
+                <td style="color: var(--color-success); font-weight: 600;">Accesible</td>
+                <td>Regresa al Paso 2 para sumar repuestos antes de grabar.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Acciones de edición / papelera</td>
+                <td>Iconos en fila</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivos</td>
+                <td>Permite ajustar cantidades o eliminar un repuesto de la lista final.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px; color: #DC2626;">Opción Cancelar NP</td>
+                <td>Botón terciario</td>
+                <td style="color: var(--color-success); font-weight: 600;">Habilitado</td>
+                <td>Cancela el flujo completo y retorna a la bandeja principal sin guardar la orden.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Opción Grabar Nota de Pedido</td>
+                <td>Botón de acción primaria</td>
+                <td style="color: var(--color-success); font-weight: 600;">Activo</td>
+                <td>Abre la ventana de decisión comercial '¿Aprobar por Ventas?'.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px; color: var(--color-text);">Opción Cancelar (en diálogo)</td>
+                <td>Botón secundario</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivo</td>
+                <td>Cierra el cuadro de diálogo y mantiene al usuario en la vista de resumen.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px; color: var(--color-text);">Opción No, Solo Grabar</td>
+                <td>Botón secundario</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivo</td>
+                <td>Da pase a la ventana de observaciones para guardar la orden en Estado Nuevo (cotización).</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px; color: var(--color-success);">Opción Sí, Aprobar Ventas</td>
+                <td>Botón primario azul</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivo</td>
+                <td>Da pase a la ventana de observaciones para guardar la orden aprobada por ventas (en verde).</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Campo Observación / Detalle</td>
+                <td>Área de texto</td>
+                <td style="color: var(--color-text-muted); font-weight: 600;">Opcional</td>
+                <td>Permite redactar indicaciones de entrega y despacho con contador de hasta 254 caracteres.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Opción Grabar Pedido</td>
+                <td>Botón de acción final</td>
+                <td style="color: var(--color-success); font-weight: 600;">Activo</td>
+                <td>Confirma las observaciones y sincroniza formalmente la orden con DSI-NET ERP.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Badges de Estado (Post-grabado)</td>
+                <td>Etiquetas informativas</td>
+                <td style="color: var(--color-text-muted); font-weight: 600;">Lectura</td>
+                <td>Indican la situación de la orden (Abierta, Pendiente, Editable).</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Opción Histórico</td>
+                <td>Botón de acción con icono</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivo</td>
+                <td>Abre la línea de tiempo vertical con las etapas operativas y de almacenes.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight" style="font-family: var(--font-mono); font-size: 12.5px;">Opción Comprobante</td>
+                <td>Botón de acción con icono</td>
+                <td style="color: var(--color-success); font-weight: 600;">Interactivo</td>
+                <td>Abre la vista previa del comprobante en A4 listo para imprimir o guardar en PDF.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior Conectada al Módulo 3.8 -->
+      <footer class="pagination-footer">
+        <a href="3.6-tipo-entrega.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 3.6 Paso 4: Selección del Tipo de Entrega</span>
+        </a>
+        <a href="3.8-listado-consultas.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">3.8 Listado y consultas de Notas de Pedido a demanda →</span>
+        </a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
